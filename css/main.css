@@ -177,6 +177,67 @@ html, body {
  padding: 20px 0;
 }
 
+/*Hero*/
+
+.hero {
+  margin-top: 50px;
+  height: 440px;
+  background-image: url("../images/hero.png");
+  background-size: cover;
+}
+
+.hero-box { /*White Box*/
+  margin-top: 180px;
+  margin-left: 33%;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  width: 400px;
+  height: 200px;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.hero p:nth-child(2) {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: serif;
+  margin-bottom: 0;
+}
+
+.hero p:nth-child(3) {
+  font-size: 14px;
+  margin-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.read-post a { /*Read Post Button*/
+  display: inline-block;
+  color: #000;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-family: serif;
+  text-decoration: none;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border: 1px solid #000;
+  margin-top: 20px;
+}
+
+.read-post a:hover {
+  display: inline-block;
+  color: #fff;
+  background-color: #E05D5D;
+  opacity: 0.75;
+  border: none;
+}
+
+/*Hero*/
+
 .masonry-brick {
  border: 0px;
  position: relative;
