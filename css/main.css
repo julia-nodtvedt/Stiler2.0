@@ -112,7 +112,7 @@ html, body {
 /*Search*/
 
 .search {
-  padding-left: 40px;
+  padding-left: 10px;
   margin-top: 7px;
 }
 
@@ -131,8 +131,9 @@ html, body {
   display: inline-block;
   padding-top: 5px;
   margin-right: 15px;
-  margin-left: 70px;
+  margin-left: 40px;
   margin-top: 5px;
+  color: #000;
 }
 
 .hamburger a, .hamburger a:hover  {
@@ -140,7 +141,7 @@ html, body {
 }
 
 .hamburger .dropdown-menu {
-  left: -40px;
+  left: 20px;
 }
 
 /*Profile Button*/
@@ -153,6 +154,7 @@ html, body {
   border-bottom: 1px solid;
   border-top: 1px solid;
 }
+
 
 .main {
  background-color: #fff ;
