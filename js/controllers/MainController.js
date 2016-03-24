@@ -7,7 +7,10 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'article', 
     	pubdate: new Date('2014', '03', '08'), 
     	cover: "../images/article1.png",
-    	saves: 0,
+      category: 'Looks for less',
+      title: "Get Ciara's casual holiday style",
+      url: "../ciara-holiday-style.html", 
+    	saves: 0
   	},
     {
       user: 'Ooh Couture',
@@ -16,6 +19,7 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'look',
       pubdate: new Date('2016', '03', '23'),
       cover: "../images/ooh-couture201603.jpg"
+      url: "../ciara-holiday-style.html",
       saves:  0
     }, 
   	{ 
@@ -25,6 +29,9 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'article',  
     	pubdate: new Date('2013', '08', '01'), 
     	cover: "../images/article2.png",
+      category: 'Looks for less',
+      title: "Get Ciara's casual holiday style",
+      url: "../ciara-holiday-style.html",
     	saves: 0
   	}, 
   	{ 
@@ -34,6 +41,9 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'article',  
     	pubdate: new Date('1999', '07', '08'), 
     	cover: "../images/article3.png",
+      category: 'Looks for less',
+      title: "Get Ciara's casual holiday style",
+      url: "../ciara-holiday-style.html",
     	saves: 0,
   	}, 
   	{ 
@@ -43,6 +53,9 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'article',  
     	pubdate: new Date('2011', '08', '16'), 
     	cover: "../images/article4.png",
+      category: 'Looks for less',
+      title: "Get Ciara's casual holiday style",
+      url: "../ciara-holiday-style.html",
     	saves: 0,
   	},
     { 
@@ -52,6 +65,9 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'article',  
       pubdate: new Date('2011', '08', '16'), 
       cover: "../images/article5.png",
+      category: 'Looks for less',
+      title: "Get Ciara's casual holiday style",
+      url: "../ciara-holiday-style.html",
       saves: 0,
     },
     { 
@@ -61,6 +77,9 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'flatlay',  
       pubdate: new Date('2014', '03', '08'), 
       cover: "../images/article6.png",
+      category: 'Looks for less',
+      title: "Get Ciara's casual holiday style",
+      url: "../ciara-holiday-style.html",
       saves: 0,
     }, 
     { 
@@ -70,6 +89,9 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'article',  
       pubdate: new Date('2013', '08', '01'), 
       cover: "../images/article1.png",
+      category: 'Looks for less',
+      title: "Get Ciara's casual holiday style",
+      url: "../ciara-holiday-style.html",
       saves: 0,
     }, 
     { 
@@ -79,6 +101,9 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'article',  
       pubdate: new Date('1999', '07', '08'), 
       cover: "../images/article2.png",
+      category: 'Looks for less',
+      title: "Get Ciara's casual holiday style",
+      url: "../ciara-holiday-style.html",
       saves: 0,
     }, 
     { 
@@ -88,6 +113,9 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'article',  
       pubdate: new Date('2011', '08', '16'), 
       cover: "../images/article3.png",
+      category: 'Looks for less',
+      title: "Get Ciara's casual holiday style",
+      url: "../ciara-holiday-style.html",
       saves: 0,
     },
     { 
@@ -97,6 +125,7 @@ app.controller('MainController', ['$scope', function($scope) {
       type: 'flatlay',  
       pubdate: new Date('2011', '08', '16'), 
       cover: "../images/article6.png",
+      url: "../ciara-holiday-style.html",
       saves: 0,
     }
   ];
