@@ -64,6 +64,10 @@
 		<div class="container masonry-container below-header" bricks>
 			<div class="masonry-brick col-xs-12 col-sm-6 col-md-4" ng-repeat="post in posts">
 				<img ng-src="{{ post.cover }}">
+				<div class="brick-title" ng-if="post.title">
+					<p>{{ post.category }}</p>
+					<h5 class="text-upper">{{ post.title }}</h5>
+				</div>
 			</div>
 		</div>
 	</div>
