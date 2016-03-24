@@ -241,19 +241,29 @@ html, body {
 
 /*Hero*/
 
-.masonry-brick {
- border: 0px;
- position: relative;
- padding: 0px;
-   border-radius: 0;
-   margin-bottom: 0px;
+.masonry-container{
+  padding:0;
+  position:relative;
+  overflow:hidden;
 }
 
+.masonry-brick {
+  position: relative;
+  border-radius: 0;
+  margin: 0 0 30px 0;
+  opacity: 0;
+}
+.masonry-brick.loaded{
+  opacity:1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
 .masonry-brick img {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    max-width: 350px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .user,
@@ -308,6 +318,10 @@ html, body {
  color: #F65A5B ;
    background: rgba(246, 90, 91, 0.25);
    transition: background 500ms;
+}
+
+.below-header{
+  margin-top:70px;
 }
 
 /*==========  Media Queries  ==========*/

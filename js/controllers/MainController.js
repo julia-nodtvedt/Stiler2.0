@@ -18,7 +18,7 @@ app.controller('MainController', ['$scope', function($scope) {
       role: 'Blogger',
       type: 'look',
       pubdate: new Date('2016', '03', '23'),
-      cover: "../images/ooh-couture201603.jpg"
+      cover: "../images/ooh-couture201603.jpg",
       url: "../ciara-holiday-style.html",
       saves:  0
     }, 
