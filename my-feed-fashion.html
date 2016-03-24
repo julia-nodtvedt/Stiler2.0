@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+      <link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:500,300,700,400' rel='stylesheet' type='text/css'>
     <link href="css/main.css" rel="stylesheet" />
     <script src="js/jquery-1.12.2.js"></script>
@@ -43,7 +43,7 @@
       </div>
       <div class="col-md-3">
         <div class="hamburger dropdown" dropdown>
-          <a href="#" ropdown-toggle class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+          <a href="#" dropdown-toggle class="dropdown-toggle" aria-haspopup="true" aria-expanded="false"><img src="images/hamburger.svg"></a>
           <ul class="dropdown-menu">
               <li><a href="about.html">About Stiler</a></li>
               <li><a href="follow-us.html">Follow Us</a></li>
@@ -54,7 +54,7 @@
             </ul>
         </div>
     <div class="profile-pic">
-      <a href="#"><img src="images/profile-pic.png" height="40px" width="40px"></a>
+      <a href="#"><img src="images/profile-pic.png" height="30px" width="30px"></a>
     </div>
   </div>
       </div>
@@ -77,6 +77,13 @@
         </div>
 
         <!-- End Hero -->
+
+        <div class="featured">
+          <div class="container-fluid">
+            <div class="row">
+            </div>
+          </div>
+        </div>
 
       <div ng-controller="MainController">
       <div class="pad-sides" masonry="{columnWidth: 100, gutter: 5, transitionDuration: '.9s', hiddenStyle: {opacity: .001, transform: 'scale(0.01)', transform: 'rotate(200deg)'}, visibleStyle: {opacity: 1, transform: 'rotate(200deg)'}}">
