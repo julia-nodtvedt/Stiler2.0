@@ -276,14 +276,56 @@ html, body {
   background: rgba(255,255,255,0.8);
   padding:20px;
   text-align:center;
-  //enable below to have titles on hover only
-  //opacity: 0;
-}
-.masonry-brick:hover .brick-title{
-  opacity:1;
+  opacity: 1;
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
+}
+.masonry-brick:hover .brick-title{
+  opacity:0;
+}
+.masonry-brick .brick-overlay{
+  opacity:0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  position:absolute;
+  top:0;
+  left:15px;
+  right:15px;
+  bottom:0;
+  background:rgba(0,0,0,0.7);
+  color:#fff
+}
+.masonry-brick:hover .brick-overlay{
+  opacity:1;
+}
+.masonry-brick .brick-overlay h3{
+  margin:10px 10px 50px 10px;
+}
+.masonry-brick .brick-overlay p{
+  margin:20px;
+}
+.brick-overlay .buttons{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.btn-outline{
+  -webkit-appearance: none;
+  background: transparent;
+  font-weight: bold;
+  border:1px solid #fff;
+  color: #fff;
+  padding: 10px 25px;
+  font-size:1.2em;
+  display: inline-block;
+}
+.btn-outline:hover{
+  color:#000;
+  text-decoration: none;
+  background:rgba(255,255,255,0.7);
 }
 .brick-title h5{
   font-family: serif;
