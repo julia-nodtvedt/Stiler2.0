@@ -132,38 +132,4 @@ app.controller('MainController', ['$scope', function($scope) {
   $scope.plusOne = function(index) { 
   	$scope.posts[index].saves += 1; 
 	};
-  $scope.articles = [
-    {
-      user: 'Mags Yip',
-      cover: "../images/article1.png"
-      pubdate: new Date ('2016', '03', '25'),
-      title: "Blogger Spotlight: Anouska Proetta Brandon from Anouska.net",
-      category: 'Blogger Life',
-      url: "../blogger-spotlight-anouska.html"
-    },
-        {
-      user: 'Mags Yip',
-      cover: "../images/article1.png"
-      pubdate: new Date ('2016', '03', '25'),
-      title: "Blogger Spotlight: Anouska Proetta Brandon from Anouska.net",
-      category: 'Blogger Life',
-      url: "../blogger-spotlight-anouska.html"
-    },
-        {
-      user: 'Mags Yip',
-      cover: "../images/article1.png"
-      pubdate: new Date ('2016', '03', '25'),
-      title: "Blogger Spotlight: Anouska Proetta Brandon from Anouska.net",
-      category: 'Blogger Life',
-      url: "../blogger-spotlight-anouska.html"
-    },
-        {
-      user: 'Mags Yip',
-      cover: "../images/article1.png"
-      pubdate: new Date ('2016', '03', '25'),
-      title: "Blogger Spotlight: Anouska Proetta Brandon from Anouska.net",
-      category: 'Blogger Life',
-      url: "../blogger-spotlight-anouska.html"
-    }
-  ];
 }]);
