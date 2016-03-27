@@ -486,6 +486,24 @@ html, body {
   color: #000;
 }
 
+.profile-nav .active a {
+  font-weight: normal;
+}
+
+.about p {
+  margin-top: 40px;
+  padding-right: 100px;
+  padding-left: 100px;
+  line-height: 30px;
+  font-weight: lighter;
+}
+
+.about p:nth-child(2) {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+
 /*==========  Media Queries  ==========*/
 
 /* Large Devices, Wide Screens */
