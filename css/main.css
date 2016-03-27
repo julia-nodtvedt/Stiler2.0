@@ -444,6 +444,51 @@ html, body {
   color: #000;
 }
 
+  color: #000;
+}
+
+/*Profile*/
+
+.profile-hero {
+  height: 450px;
+  border-bottom: 1px solid #000;
+}
+
+.profile-hero img {
+  margin-top: 170px;
+  margin-left: 44%;
+}
+
+.profile-hero p {
+  text-align: center;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-family: serif;
+  font-size: 18px;
+}
+
+.profile-nav {
+  margin-left: 25%;
+  margin-top: 45px;
+}
+
+.profile-hero li {
+  display: inline-block;
+  float: left;
+  margin-left: 40px;
+}
+
+.profile-hero li:first-child {
+  margin-left: 0;
+}
+
+.profile-hero li a {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: #000;
+}
+
 /*==========  Media Queries  ==========*/
 
 /* Large Devices, Wide Screens */
