@@ -60,25 +60,27 @@
 		</div>
 	</div>
 	<!-- End Header -->
-	<div ng-controller="MainController">
-		<div class="container masonry-container below-header" bricks>
-			<div class="masonry-brick col-xs-12 col-sm-6 col-md-4" ng-repeat="post in posts">
-				<img ng-src="{{ post.cover }}">
-				<div class="brick-title" ng-if="post.title">
-					<p>{{ post.category }}</p>
-					<h5 class="text-upper">{{ post.title }}</h5>
-				</div>
+	<div class="profile-hero">
+	<div class="container">
+		<div class="row">
+			<img src="images/profilepic.png">
+			<p>Alexandra Dean</p>
+		</div>
+		<div class="row">
+			<div class="profile-nav">
+				<ul>
+					<li><a href="followers.html">Followers</a></li>
+					<li><a href="following.html">Following</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="#">Follow</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
+	</div>
 
-	<!-- Modules -->
-	<script src="js/app.js"></script>
-	<!-- Controllers -->
-	<script src="js/controllers/MainController.js"></script>
-	<!-- Directives -->
-	<script src="js/directives/appInfo.js"></script>
-	<script src="js/directives/bricks.js"></script>
+
 </body>
 
 </html>
