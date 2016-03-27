@@ -444,14 +444,11 @@ html, body {
   color: #000;
 }
 
-  color: #000;
-}
-
 /*Profile*/
 
 .profile-hero {
   height: 450px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #979797;
 }
 
 .profile-hero img {
