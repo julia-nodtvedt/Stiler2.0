@@ -79,9 +79,25 @@
 						{{ post.category }}
 					</p>
 					<p class="buttons">
-						<button ng-click="post.saves = post.saves + 1" class="btn-outline pull-left">SAVE IT</button>
+						<button ng-click="savePost(post.id)" class="btn-outline pull-left">SAVE IT</button>
 						<a href="{{ post.url }}" class="btn-outline pull-right">SHOP IT</a>
 					</p>
+					<div class="save-list" ng-class="overlayClass(post.id)">
+						<h4>SAVE TO</h4>
+						<a class="close-save" ng-click="savePost(null)">&times;</a>
+						<ul>
+							<li ng-repeat="list in lists" ng-class="listClass(list)" ng-click="saveActiveTo(list)">{{ list.name }}</li>
+						</ul>
+						<div class="bottom">
+							<a ng-if="getMode() != 'edit'" ng-click="setMode('edit')">OR CREATE A NEW LIST</a>							
+							<div ng-if="getMode() == 'edit'">
+									<input type="text" class="pull-left" ng-model="newListName" placeholder="list name">
+									<button class="pull-right" ng-click="setMode('')">Cancel</button>
+									<button class="pull-right" ng-click="addList(newListName)">Add</button>
+							</div>
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
