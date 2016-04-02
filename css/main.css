@@ -275,14 +275,56 @@ html, body {
   background: rgba(255,255,255,0.8);
   padding:20px;
   text-align:center;
-  //enable below to have titles on hover only
-  //opacity: 0;
-}
-.masonry-brick:hover .brick-title{
-  opacity:1;
+  opacity: 1;
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;
+}
+.masonry-brick:hover .brick-title{
+  opacity:0;
+}
+.masonry-brick .brick-overlay{
+  opacity:0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  position:absolute;
+  top:0;
+  left:15px;
+  right:15px;
+  bottom:0;
+  background:rgba(0,0,0,0.7);
+  color:#fff
+}
+.masonry-brick:hover .brick-overlay{
+  opacity:1;
+}
+.masonry-brick .brick-overlay h3{
+  margin:10px 10px 50px 10px;
+}
+.masonry-brick .brick-overlay p{
+  margin:20px;
+}
+.brick-overlay .buttons{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.btn-outline{
+  -webkit-appearance: none;
+  background: transparent;
+  font-weight: bold;
+  border:1px solid #fff;
+  color: #fff;
+  padding: 10px 25px;
+  font-size:1.2em;
+  display: inline-block;
+}
+.btn-outline:hover{
+  color:#000;
+  text-decoration: none;
+  background:rgba(255,255,255,0.7);
 }
 .brick-title h5{
   font-family: serif;
@@ -486,6 +528,11 @@ html, body {
   color: #000;
 }
 
+.profile-hero li a:hover {
+  text-decoration: none;
+  font-weight: normal;
+}
+
 .profile-nav .active a {
   font-weight: normal;
 }
@@ -503,7 +550,442 @@ html, body {
   margin-bottom: 50px;
 }
 
+.save-list{
+  background: #fff;
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  width:80%;
+  height:70%;
+  padding:20px;
+  color:#333;
+  transition: visibility 0s linear 0.5s, opacity .25s ease-in-out;
+  opacity:0;
+  visibility: hidden;
+}
 
+.save-list.shown{
+  opacity:1;
+  visibility: visible;
+  transition-delay:0s;
+}
+
+.save-list .close-save{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 39px;
+  color: #333;
+  font-weight: 100;
+  text-decoration: none;
+  line-height: 20px;
+  cursor:pointer;
+}
+
+.save-list h4{
+  margin:0 0 20px;
+}
+.save-list ul{
+  list-style: none;
+  padding:0;
+  position:absolute;
+  top:60px;
+  left:20px;
+  right:20px;
+  padding-right:40px;
+  bottom:40px;
+  overflow: auto;
+}
+.save-list li:first-child{
+  border-top:1px solid #333;
+}
+.save-list li{
+  border-bottom:1px solid #333;
+  line-height: 30px;
+  transition: padding .15s ease-in-out;
+  cursor: pointer;
+}
+.save-list li:hover{
+  padding-left:30px;
+}
+.save-list li.saved{
+  padding-left:30px;
+  background: url(../images/tick.png) 0 50% no-repeat;
+}
+.save-list .bottom{
+  position: absolute;
+  bottom:10px;
+  left:20px;
+  right:20px;
+}
+.save-list .bottom a{
+  color:#333;
+  cursor: pointer;
+}
+.save-list .bottom input[type=text]{
+  width:45%;
+  padding:0 3px;
+}
+.save-list .bottom button{
+  width:25%;
+  display: inline-block;
+  margin-left:3px;
+}
+
+/*Look Page*/
+
+.lookpage-header {
+  border-bottom: 1px solid #979797;
+}
+
+.lookpage-header img {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.lookpage-header p {
+  font-size: 18px;
+  font-family: serif;
+  margin-top: 20px;
+}
+
+.lookpage-header p:nth-child(2) {
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.lookpage-header a {
+  float: left;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.lookpage-content p {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+.lookpage-content p:first-child {
+  margin-bottom: -10px;
+  font-size: 38px;
+  font-family: serif;
+}
+
+.lookpage-content ul {
+  margin-left: -55px;
+}
+
+.lookpage-content li {
+  float: left;
+  list-style-type: none;
+}
+
+.lookpage-content li:nth-child(1) {
+  margin-right: 20px;
+}
+
+.lookpage-content a {
+  margin-top: 10px;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid #000;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.lookpage-content img {
+  margin-top: 15px;
+  margin-left: -15px;
+  width: 750px;
+  height: auto;
+}
+
+.lookpage-content img:first-child {
+  margin-top: 20px;
+}
+
+.shop-the-look img {
+  width: 350px;
+  height: auto;
+}
+
+.shop-the-look p {
+  text-align: center;
+  margin-left: -23px;
+  margin-bottom: 15px;
+}
+
+.shop-the-look a:first-child {
+  margin-left: 100px;
+  margin-right: -95px;
+  text-transform: uppercase;
+}
+
+/*Look Page*/
+
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 30px auto;
+  background: #fff;
+  width: 80%;
+  height: 90%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #111;
+}
+.popup .content {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+/*Image Slider*/
+
+.slider {
+  background: #fff;
+  width: 350px;
+  height: 600px;
+  position: relative;
+  top: 10px;
+  overflow: hidden;
+}
+
+.images {
+  background: #fff;
+  width: 100%;
+  height: 74%;
+  transition: background .5s linear;
+}
+
+input[type='radio'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-size: 70px 70px;
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  cursor: pointer;
+  position: relative;
+  float: left;
+  top: 450px;
+}
+input[type='radio']:checked {
+  content: '';
+  box-shadow: none;
+  -webkit-filter: none;
+}
+
+input[type='radio']:hover{
+  border: solid 5px #fff;
+  -webkit-filter: none;
+  transform: scale(1.05);
+  z-index: 9999;
+}
+
+.slide1 {
+  background: url('../images/rippedjeans1.jpg');
+}
+
+.slide2 {
+  background: url('../images/rippedjeans2.jpg');
+}
+
+.slide3 {
+  background: url('../images/rippedjeans3.jpg');
+}
+
+.slide4 {
+  background: url('../images/rippedjeans4.jpg');
+}
+
+.slide1:checked ~ .images {
+  background: url('../images/rippedjeans1.jpg');
+  background-size: cover;
+}
+
+.slide2:checked ~ .images {
+  background: url('../images/rippedjeans2.jpg');
+  background-size: cover;
+}
+
+.slide3:checked ~ .images {
+  background: url('../images/rippedjeans3.jpg');
+  background-size: cover;
+}
+
+.slide4:checked ~ .images {
+  background: url('../images/rippedjeans4.jpg');
+  background-size: cover;
+}
+
+/*Product Popup*/
+
+.product-info p:nth-child(1) {
+  margin-top: 10px;
+  font-size: 21px;
+}
+
+.product-info p:nth-child(3) {
+  margin-top: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.product-info p:nth-child(5) {
+  margin-top: 35px;
+  text-transform: uppercase;
+}
+
+.product-info .buttons {
+  margin-top: 35px;
+  margin-left: -40px;
+}
+
+.product-info .buttons li{
+  float: left;
+  list-style-type: none;
+  padding: 10px 25px 10px 25px;
+}
+
+.product-info .buttons li a {
+  color: #fff;
+}
+
+.product-info .buttons li:first-child {
+  background-color: rgb(146, 146, 146);
+  margin-right: 20px; 
+}
+
+.product-info .buttons li:last-child {
+  background-color: rgb(70, 210, 170);
+}
+
+.product-info .product-desc {
+  margin-top: 90px;
+  margin-left: -25px;
+=======
+.save-list{
+  background: #fff;
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  width:80%;
+  height:70%;
+  padding:20px;
+  color:#333;
+  transition: visibility 0s linear 0.5s, opacity .25s ease-in-out;
+  opacity:0;
+  visibility: hidden;
+}
+
+.save-list.shown{
+  opacity:1;
+  visibility: visible;
+  transition-delay:0s;
+>>>>>>> origin/master
+}
+
+.save-list .close-save{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 39px;
+  color: #333;
+  font-weight: 100;
+  text-decoration: none;
+  line-height: 20px;
+  cursor:pointer;
+}
+
+.save-list h4{
+  margin:0 0 20px;
+}
+.save-list ul{
+  list-style: none;
+  padding:0;
+  position:absolute;
+  top:60px;
+  left:20px;
+  right:20px;
+  padding-right:40px;
+  bottom:40px;
+  overflow: auto;
+}
+.save-list li:first-child{
+  border-top:1px solid #333;
+}
+.save-list li{
+  border-bottom:1px solid #333;
+  line-height: 30px;
+  transition: padding .15s ease-in-out;
+  cursor: pointer;
+}
+.save-list li:hover{
+  padding-left:30px;
+}
+.save-list li.saved{
+  padding-left:30px;
+  background: url(../images/tick.png) 0 50% no-repeat;
+}
+.save-list .bottom{
+  position: absolute;
+  bottom:10px;
+  left:20px;
+  right:20px;
+}
+.save-list .bottom a{
+  color:#333;
+  cursor: pointer;
+}
+.save-list .bottom input[type=text]{
+  width:45%;
+  padding:0 3px;
+}
+.save-list .bottom button{
+  width:25%;
+  display: inline-block;
+  margin-left:3px;
+}
 /*==========  Media Queries  ==========*/
 
 /* Large Devices, Wide Screens */

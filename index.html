@@ -6,6 +6,7 @@
 	<link href="css/main.css" rel="stylesheet" />
 	<script src="js/jquery-1.12.2.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body ng-app="myApp">
@@ -66,7 +67,37 @@
 				<img ng-src="{{ post.cover }}">
 				<div class="brick-title" ng-if="post.title">
 					<p>{{ post.category }}</p>
-					<h5 class="text-upper">{{ post.title }}</h5>
+					<h5>{{ post.title }}</h5>
+				</div>
+				<div class="brick-overlay">
+					<h3>
+						Look by<br>
+						{{ post.user }} <i class="fa fa-star"></i> {{ post.saves }}
+					</h3>
+					<p ng-if="post.category">
+						Featured in<br>
+						{{ post.category }}
+					</p>
+					<p class="buttons">
+						<button ng-click="savePost(post.id)" class="btn-outline pull-left">SAVE IT</button>
+						<a href="{{ post.url }}" class="btn-outline pull-right">SHOP IT</a>
+					</p>
+					<div class="save-list" ng-class="overlayClass(post.id)">
+						<h4>SAVE TO</h4>
+						<a class="close-save" ng-click="savePost(null)">&times;</a>
+						<ul>
+							<li ng-repeat="list in lists" ng-class="listClass(list)" ng-click="saveActiveTo(list)">{{ list.name }}</li>
+						</ul>
+						<div class="bottom">
+							<a ng-if="getMode() != 'edit'" ng-click="setMode('edit')">OR CREATE A NEW LIST</a>							
+							<div ng-if="getMode() == 'edit'">
+									<input type="text" class="pull-left" ng-model="newListName" placeholder="list name">
+									<button class="pull-right" ng-click="setMode('')">Cancel</button>
+									<button class="pull-right" ng-click="addList(newListName)">Add</button>
+							</div>
+						</div>
+
+					</div>
 				</div>
 			</div>
 		</div>
