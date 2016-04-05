@@ -8,26 +8,32 @@ angular.module("myApp").directive("bricks", function() {
         var bricks = elm[0].querySelectorAll('.masonry-brick');
         if (bricks.length == 0) return;
         for (var i=0; i<bricks.length; i++){
-          bricks[i].style.top = 0;
+          bricks[i].style.position = 'static';
         }
 
-        var columns = {};
+        var columnHeights = {};
         for (var i=0; i<bricks.length; i++){
-          var column = columns[bricks[i].offsetLeft] = columns[bricks[i].offsetLeft] || [];
-          column.push(bricks[i]);
+          columnHeights[bricks[i].offsetLeft] = 0;
         }
-
+        //restack bricks
         var containerHeight = 0;
-        for (var i in columns){
-          var height = 0;
-          for (var j in columns[i]){
-            var brick = columns[i][j];
-            brick.style.top = (height - brick.offsetTop) + 'px';
-            var style = brick.currentStyle || window.getComputedStyle(brick);
-            height += brick.offsetHeight + parseInt(style.marginBottom);
-            if (!brick.className.match(/loaded/)) brick.className = brick.className + ' loaded';
+        for (var i=0; i<bricks.length; i++){
+          var shortCol = null;
+          for (var j in columnHeights){
+            if (shortCol == null || columnHeights[shortCol] > columnHeights[j]){
+              shortCol = j;
+            }
           }
-          containerHeight = Math.max(containerHeight, height);
+
+          var brick = bricks[i];
+          brick.style.position = 'absolute';
+          brick.style.left = shortCol + 'px';
+          brick.style.top = columnHeights[shortCol] + 'px';
+
+          var style = brick.currentStyle || window.getComputedStyle(brick);
+          columnHeights[shortCol] += brick.offsetHeight + parseInt(style.marginBottom);
+          containerHeight = Math.max(containerHeight, columnHeights[shortCol]);
+          if (!brick.className.match(/loaded/)) brick.className = brick.className + ' loaded';
         }
         elm[0].style.height = containerHeight + 'px';
       }
