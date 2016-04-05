@@ -21,6 +21,10 @@ html, body {
   height: 50px;
 }
 
+.row [class*='col-'] img{
+  max-width:100%;
+}
+
 .row.no-gutter { /*Applied to Header*/
   margin-left: 0;
   margin-right: 0;
@@ -739,7 +743,7 @@ ul.profile-nav:after{
   font-family: sans-serif;
 }
 
-.lookpage-header a {
+.lookpage-header a, .btn-square {
   float: left;
   margin-right: 20px;
   margin-top: 10px;
@@ -747,7 +751,11 @@ ul.profile-nav:after{
   border: 1px solid #000;
   color: #000;
 }
-
+.lookpage-header a:hover, .btn-square:hover{
+  text-decoration: none;
+  background: #eee;
+  color:#000;
+}
 .lookpage-content p {
   margin-top: 30px;
   margin-bottom: 40px;
@@ -974,15 +982,19 @@ ul.profile-nav:after{
   max-width: 600px;
   padding:30px 100px;
   background: rgba(255,255,255,0.9);
-  font-family: serif;
   margin:-75px auto 0 auto;
+  font-family: serif;
   font-size:30px;
   line-height: 35px;
   letter-spacing: 3px;
   word-spacing: 5px;
   text-align: center;
 }
-
+.image-title.title-bottom h1{
+  margin:0 auto;
+  top:auto;
+  bottom:40px;
+}
 h2.divide{
   border-bottom:1px solid #333;
   margin:40px;
@@ -1003,11 +1015,93 @@ h2.divide span{
 }
 
 p.hugetext{
-  font-size: 20px;
+  font-size: 18px;
   line-height: 40px;
   margin: 40px auto;
   max-width:900px;
 }
+
+.imagesection{
+  max-width:900px;
+  margin:40px auto;  
+}
+
+.imagesection h1{
+  font-family: serif;
+  font-size:30px;
+  line-height: 35px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  text-align: center;
+  margin:40px 0;  
+}
+.imagesection>h1{
+  margin-top:0;
+}
+.imagesection.nudgeup{
+  margin-top:-40px;
+  margin-bottom:20px;
+}
+.imagesection.nudgeup+.imagesection{
+  margin-top:20px;
+}
+.imagesection.nudgeup img{
+  position:relative;
+  top:-40px;
+}
+.imagesection.nudgeup h1{
+  margin-top:140px;
+}
+.imagesection img{
+  width: 100%;
+  display: block;
+}
+.imagesection .hugetext{
+  max-width: 700px;
+}
+
+.profile-link{
+  border-top:1px solid #333;
+  border-bottom: 1px solid #333;
+  margin:40px 0;
+  padding:20px 40px 20px 220px;
+  min-height:200px;
+  position:relative;
+}
+.profile-link img{
+  width:140px;
+  height:140px;
+  position:absolute;
+  top:20px;
+  left:40px;
+}
+.profile-link p{
+  max-width: 600px;
+}
+.profile-link h1{
+  font-family: serif;
+  font-size:20px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-align: left;
+  margin:0 0 1em;
+  text-transform: uppercase;
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+  .profile-link{
+    padding:180px 20px 20px 20px;
+  }
+  .profile-link img{
+    left:50%;
+    margin-left:-70px;
+  }
+}
+
+.space-huge{margin-top:80px;margin-bottom:80px;}
+.space-top-huge{margin-top:80px;}
+.space-bottom-huge{margin-bottom:80px;}
 
 /*==========  Media Queries  ==========*/
 
