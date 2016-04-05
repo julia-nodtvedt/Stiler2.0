@@ -21,7 +21,7 @@
 				</div>
 				<div class="col-md-4">
 					<ul class="top-nav">
-						<li><a href="index.html">Fashion</a></li>
+						<li><a href="index.html"><span class="active">Fashion</span></a></li>
 						<li class="dropdown" dropdown>
 							<a href="#" dropdown-toggle class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Magazine</a>
 							<ul class="dropdown-menu">
@@ -71,7 +71,7 @@
 				</div>
 				<div class="brick-overlay">
 					<h3>
-						Look by<br>
+						{{ post.type }} by<br>
 						{{ post.user }} <i class="fa fa-star"></i> {{ post.saves }}
 					</h3>
 					<p ng-if="post.category">

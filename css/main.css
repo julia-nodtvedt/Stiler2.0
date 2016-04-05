@@ -66,6 +66,15 @@ html, body {
   font-family: serif;
 }
 
+.header ul li a:hover {
+  text-decoration: none;
+  color: rgb(170, 20, 20);
+}
+
+.header .active {
+  color: rgb(170, 20, 20);
+}
+
 /*Dropdown*/
 
 .dropdown {
@@ -149,10 +158,6 @@ html, body {
   vertical-align: top;
   display: inline-block;
   margin-top: 5px;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
 }
 
 
@@ -551,7 +556,7 @@ html, body {
   top: 410px;
   border: 1px solid #000;
   padding: 10px 58px;
-  margin-left: -60px;
+  margin-left: -4.3%;
   color: #000;
 }
 
@@ -568,6 +573,10 @@ html, body {
   left: 27.3%;
 }
 
+.profile-nav .active {
+  color: rgb(170, 20, 20);
+}
+
 .profile-nav li {
   float: left;
   list-style-type: none;
@@ -578,6 +587,11 @@ html, body {
   font-size: 16px;
   color: #000;
   text-transform: uppercase;
+}
+
+.profile-nav li a:hover {
+  text-decoration: none;
+  color: rgb(170, 20, 20);
 }
 
 .my-stiler {
@@ -944,92 +958,6 @@ input[type='radio']:hover{
 .product-info .product-desc {
   margin-top: 90px;
   margin-left: -25px;
-=======
-.save-list{
-  background: #fff;
-  position:absolute;
-  bottom:20px;
-  left:20px;
-  width:80%;
-  height:70%;
-  padding:20px;
-  color:#333;
-  transition: visibility 0s linear 0.5s, opacity .25s ease-in-out;
-  opacity:0;
-  visibility: hidden;
-}
-
-.save-list.shown{
-  opacity:1;
-  visibility: visible;
-  transition-delay:0s;
->>>>>>> origin/master
-}
-
-=======
-
->>>>>>> origin/master
-.save-list .close-save{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 39px;
-  color: #333;
-  font-weight: 100;
-  text-decoration: none;
-  line-height: 20px;
-  cursor:pointer;
-}
-
-.save-list h4{
-  margin:0 0 20px;
-}
-.save-list ul{
-  list-style: none;
-  padding:0;
-  position:absolute;
-  top:60px;
-  left:20px;
-  right:20px;
-  padding-right:40px;
-  bottom:40px;
-  overflow: auto;
-}
-.save-list li:first-child{
-  border-top:1px solid #333;
-}
-.save-list li{
-  border-bottom:1px solid #333;
-  line-height: 30px;
-  transition: padding .15s ease-in-out;
-  cursor: pointer;
-}
-.save-list li:hover{
-  padding-left:30px;
-}
-.save-list li.saved{
-  padding-left:30px;
-  background: url(../images/tick.png) 0 50% no-repeat;
-}
-.save-list .bottom{
-  position: absolute;
-  bottom:10px;
-  left:20px;
-  right:20px;
-}
-.save-list .bottom a{
-  color:#333;
-  cursor: pointer;
-}
-.save-list .bottom input[type=text]{
-  width:45%;
-  padding:0 3px;
-}
-.save-list .bottom button{
-  width:25%;
-  display: inline-block;
-  margin-left:3px;
-}
 
 /*Article*/
 
