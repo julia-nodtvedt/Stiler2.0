@@ -106,11 +106,23 @@ Jeans blue boohoo £15.00</p>
 		<a class="close" href="#">x</a>
 		<div class="content">
 			<div class="slider col-md-4">
-			  <input checked='' class='slide1' name='thumbnail' type='radio'/>
-			  <input class='slide2' name='thumbnail' type='radio' />
-			  <input class='slide3' name='thumbnail' type='radio' />
-			  <input class='slide4' name='thumbnail' type='radio' />
-			  <div class='images'></div>
+				<div class='images'></div>
+				<label>
+					<img src="images/rippedjeans1.jpg">
+					<input checked name='thumbnail' type='radio'/>
+				</label>
+				<label>
+					<img src="images/rippedjeans2.jpg">
+					<input name='thumbnail' type='radio' />
+				</label>
+				<label>
+					<img src="images/rippedjeans3.jpg">
+					<input name='thumbnail' type='radio' />
+				</label>
+				<label>
+					<img src="images/rippedjeans4.jpg">
+					<input name='thumbnail' type='radio' />
+				</label>
 			</div>
 			<div class="product-info col-md-8">
 				<p>ASOS Originals</p>
@@ -142,5 +154,12 @@ Jeans blue boohoo £15.00</p>
 
 
 </body>
+<script type="text/javascript">
+	$('.slider input').on('change', function(){
+		var slider = $(this).closest('.slider');
+		var img = $('input:checked', slider).closest('label').find('img').attr('src');
+		$('.images').css('background-image', 'url('+ img +')');
+	}).filter(':checked').triggerHandler('change');
+</script>
 
 </html>
