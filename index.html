@@ -62,41 +62,43 @@
 	</div>
 	<!-- End Header -->
 	<div ng-controller="MainController">
-		<div class="container masonry-container below-header" bricks>
-			<div class="masonry-brick col-xs-12 col-sm-6 col-md-4" ng-repeat="post in posts">
-				<img ng-src="{{ post.cover }}">
-				<div class="brick-title" ng-if="post.title">
-					<p>{{ post.category }}</p>
-					<h5>{{ post.title }}</h5>
-				</div>
-				<div class="brick-overlay">
-					<h3>
-						Look by<br>
-						{{ post.user }} <i class="fa fa-star"></i> {{ post.saves }}
-					</h3>
-					<p ng-if="post.category">
-						Featured in<br>
-						{{ post.category }}
-					</p>
-					<p class="buttons">
-						<button ng-click="savePost(post.id)" class="btn-outline pull-left">SAVE IT</button>
-						<a href="{{ post.url }}" class="btn-outline pull-right">SHOP IT</a>
-					</p>
-					<div class="save-list" ng-class="overlayClass(post.id)">
-						<h4>SAVE TO</h4>
-						<a class="close-save" ng-click="savePost(null)">&times;</a>
-						<ul>
-							<li ng-repeat="list in lists" ng-class="listClass(list)" ng-click="saveActiveTo(list)">{{ list.name }}</li>
-						</ul>
-						<div class="bottom">
-							<a ng-if="getMode() != 'edit'" ng-click="setMode('edit')">OR CREATE A NEW LIST</a>							
-							<div ng-if="getMode() == 'edit'">
-									<input type="text" class="pull-left" ng-model="newListName" placeholder="list name">
-									<button class="pull-right" ng-click="setMode('')">Cancel</button>
-									<button class="pull-right" ng-click="addList(newListName)">Add</button>
+		<div class="container below-header">
+			<div class="masonry-container row small-gutter" bricks>
+				<div class="masonry-brick col-xs-12 col-sm-6 col-md-4" ng-repeat="post in posts">
+					<img ng-src="{{ post.cover }}">
+					<div class="brick-title" ng-if="post.title">
+						<p>{{ post.category }}</p>
+						<h5>{{ post.title }}</h5>
+					</div>
+					<div class="brick-overlay">
+						<h3>
+							Look by<br>
+							{{ post.user }} <i class="fa fa-star"></i> {{ post.saves }}
+						</h3>
+						<p ng-if="post.category">
+							Featured in<br>
+							{{ post.category }}
+						</p>
+						<p class="buttons">
+							<button ng-click="savePost(post.id)" class="btn-outline pull-left">SAVE IT</button>
+							<a href="{{ post.url }}" class="btn-outline pull-right">SHOP IT</a>
+						</p>
+						<div class="save-list" ng-class="overlayClass(post.id)">
+							<h4>SAVE TO</h4>
+							<a class="close-save" ng-click="savePost(null)">&times;</a>
+							<ul>
+								<li ng-repeat="list in lists" ng-class="listClass(list)" ng-click="saveActiveTo(list)">{{ list.name }}</li>
+							</ul>
+							<div class="bottom">
+								<a ng-if="getMode() != 'edit'" ng-click="setMode('edit')">OR CREATE A NEW LIST</a>							
+								<div ng-if="getMode() == 'edit'">
+										<input type="text" class="pull-left" ng-model="newListName" placeholder="list name">
+										<button class="pull-right" ng-click="setMode('')">Cancel</button>
+										<button class="pull-right" ng-click="addList(newListName)">Add</button>
+								</div>
 							</div>
-						</div>
 
+						</div>
 					</div>
 				</div>
 			</div>
