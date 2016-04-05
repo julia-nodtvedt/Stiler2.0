@@ -385,7 +385,7 @@ app.controller('MainController', ['$scope', function($scope) {
   $scope.filterCategories = {
     trends: ['most popular', 'trending' ,'new in', 'ponchos', 'stripes', 'casual', 'classic shorts', 'ripped jeans', 'on your head', 'fringe fever',
 'girls night out', 'chic to work', 'animal print', 'flared pants', 'platforms', 'flower power', 'tartan', 'pretty pastel', 'aztec invasion'],
-    colours: ['brown','red','orange','yellow','green','darkgreen','black','grey','purple','blue','light blue','nude'],
+    colours: ['brown','red','orange','yellow','green','darkgreen','black','grey','purple','blue','lightblue','nude'],
     products: ['jacket','jeans','shoes','trousers']
   }
   /*
