@@ -628,6 +628,15 @@ ul.profile-nav:after{
   text-transform: uppercase;
 }
 
+.profile-nav li a:hover {
+  color: rgb(170, 20, 20);
+  text-decoration: none;
+}
+
+.profile-nav .active {
+  color: rgb(170, 20, 20);
+}
+
 .my-stiler p {
   text-transform: uppercase;
   font-size: 18px;
