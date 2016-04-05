@@ -987,10 +987,62 @@ input[type='radio']:hover{
 .product-info .product-desc {
   margin-top: 90px;
   margin-left: -25px;
-
+}
 /*Article*/
 
 
+/*============  Magazines  ============*/
+.image-title{
+  position:relative;
+  margin-top:-20px;
+}
+.image-title img{
+  display: block;
+  width:100%;
+  height:auto;
+}
+.image-title h1{
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  max-width: 600px;
+  padding:30px 100px;
+  background: rgba(255,255,255,0.9);
+  font-family: serif;
+  margin:-75px auto 0 auto;
+  font-size:30px;
+  line-height: 35px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  text-align: center;
+}
+
+h2.divide{
+  border-bottom:1px solid #333;
+  margin:40px;
+  font-size: 16px;
+  line-height: 17px;
+  font-family: serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+h2.divide span{
+  display: inline-block;
+  background: #fff;
+  position:relative;
+  top:8px;
+  padding:0 40px;
+}
+
+p.hugetext{
+  font-size: 20px;
+  line-height: 40px;
+  margin: 40px auto;
+  max-width:900px;
+}
 
 /*==========  Media Queries  ==========*/
 
