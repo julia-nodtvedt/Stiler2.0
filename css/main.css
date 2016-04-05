@@ -655,6 +655,17 @@ ul.profile-nav:after{
   margin-bottom: 40px;
 }
 
+.my-lists iframe {
+  width: 100%;
+}
+
+.list-items li {
+  display: inline-block;
+  float: left;
+  height: 200px;
+  width: auto;
+}
+
 .save-list{
   background: #fff;
   position:absolute;
