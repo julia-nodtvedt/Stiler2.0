@@ -152,6 +152,7 @@ app.controller('MainController', ['$scope', function($scope) {
   $scope.plusOne = function(index) { 
   	$scope.posts[index].saves += 1; 
 	};
+  var saveFadeTimeout = null;
   $scope.saveActiveTo = function(list){
     list.savedItems = list.savedItems || [];
     var index = list.savedItems.indexOf($scope.activePost);
@@ -160,10 +161,11 @@ app.controller('MainController', ['$scope', function($scope) {
     }else{
       list.savedItems.push($scope.activePost);
     }
-    setTimeout(function(){
+    clearTimeout(saveFadeTimeout);
+    saveFadeTimeout = setTimeout(function(){
       $scope.savePost(null);
       $scope.$apply();
-    }, 250);
+    }, 1500);
   };
   $scope.overlayClass = function(postId){
     return postId == $scope.activePost ? 'shown' : '';
