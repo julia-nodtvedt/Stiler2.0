@@ -183,6 +183,10 @@ html, body {
  padding: 40px 0;
  margin-top: 52px;
 }
+.main.flush{
+  margin-top:50px;
+  padding-top:0;
+}
 
 .main h1 {
  color: #F65A5B ;
@@ -249,15 +253,12 @@ html, body {
   padding-right: 25px;
   padding-left: 25px;
   border: 1px solid #000;
-  margin-top: 20px;
 }
 
 .read-post a:hover {
-  display: inline-block;
-  color: #fff;
-  background-color: #E05D5D;
-  opacity: 0.75;
-  border: none;
+  color:#000;
+  text-decoration: none;
+  background:#eee;
 }
 
 /*Masonry*/
@@ -410,6 +411,9 @@ html, body {
 .below-header{
   margin-top:70px;
 }
+.below-header.flush{
+  margin-top:50px;
+}
 
 /*Featured Article*/
 
@@ -417,25 +421,30 @@ html, body {
   background-image: url("../images/brontebeach3.jpg");
   background-size: cover;
   height: 400px;
+  background-position: 50% 20%;
 }
 
 .featured .box {
-  margin-top: 100px;
-  margin-left: 32%;
-  padding-top: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin: 100px auto 0;
+  padding:20px 40px;
   text-align: center;
   width: 400px;
-  height: 200px;
+  min-height: 200px;
   background-color: rgba(255,255,255,0.8);
+  text-align: center;
 }
 
-.featured .box p {
-  margin-top: 15px;
+.featured .box h1 {
   text-align: center;
-  font-size: 23px;
+  font-size: 22px;
   font-family: serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 26px;
+  color: inherit;
+  width:auto;
+  margin:20px 0;
+  padding:0;
 }
 
 .top-stories-heading {
@@ -447,26 +456,45 @@ html, body {
   text-align: center;
 }
 
+h1.upper{
+  text-align: center;
+  text-transform: uppercase;
+  margin:40px 0;
+  font-family: serif;
+  font-size:30px;
+}
+
 .top-stories img {
   width: 370px;
 }
 
-.top-stories-title {
+.top-stories h2 {
   font-size: 23px;
   font-family: serif;
-  margin-top: 10px;
+  margin: 20px 10px;
   text-transform: none;
 }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .top-stories h2{
+    margin-right:90px;
+  }
+}
 
-.top-stories-category {
+.top-stories h2 a{
+  color:inherit;
+}
+
+.top-stories p {
   text-transform: uppercase;
   font-family: sans-serif;
   font-weight: 200;
   font-size: 14px;
+  margin: 10px;
 }
 
 .latest-news {
-  margin-top: 35px;
+  margin-top: 70px;
   font-family: serif;
   font-size: 35px;
   text-align: center;
@@ -493,6 +521,20 @@ html, body {
 .article-feed p:nth-child(2) {
   font-size: 36px;
   font-family: serif;
+  line-height: 40px;
+  margin:35px 0;
+}
+.article-feed p.spaced:nth-child(2) {
+  margin: 55px 0;
+}
+.article-feed p:nth-child(3) {
+  color: gray;
+  font-size: 14px;
+  margin:22px 0;
+}
+.article-feed a{
+  color:inherit;
+  text-decoration: underline;
 }
 
 .article-feed .divider {
@@ -1064,7 +1106,7 @@ ul.profile-nav:after{
 }
 h2.divide{
   border-bottom:1px solid #333;
-  margin:40px;
+  margin:36px 40px 44px 40px;
   font-size: 16px;
   line-height: 17px;
   font-family: serif;
@@ -1088,7 +1130,7 @@ p.hugetext{
   max-width:900px;
 }
 
-.imagesection{
+.imagesection, .widthshrink{
   max-width:900px;
   margin:40px auto;  
 }
@@ -1214,7 +1256,11 @@ p.hugetext{
 }
 .space-huge{margin-top:80px;margin-bottom:80px;}
 .space-top-huge{margin-top:80px;}
-.space-bottom-huge{margin-bottom:80px;}
+.space-bottom-huge{margin-bottom:80px !important;}
+
+.space-large{margin-top:40px;margin-bottom:40px;}
+.space-top-large{margin-top:40px;}
+.space-bottom-large{margin-bottom:40px !important;}
 
 /*==========  Media Queries  ==========*/
 
