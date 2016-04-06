@@ -78,6 +78,12 @@
 						<span ng-repeat-end> </span>
 					</p>
 
+					<p ng-hide="!hasSubProducts()">
+						<a ng-click="filter('subproducts', null)" ng-class="getActiveClass(filters['subproducts'] == null)">View All</a>
+						<a ng-click="filter('subproducts', t)" ng-repeat-start="t in getSubProducts()" ng-class="getActiveClass(filters['subproducts'] == t)">{{ t.replace(filters['products']+'-', '') }}</a>
+						<span ng-repeat-end> </span>
+					</p>
+
 					<p>
 						<a ng-click="filter('colours', null)" ng-class="getActiveClass(filters['colours'] == null)" class="colour colourall"><span></span></a>
 						<a ng-click="filter('colours', c)" ng-repeat="c in filterCategories['colours']" class="colour" style="background-color:{{ getBgColour(c) }}" ng-class="getActiveClass(filters['colours'] == c)"></a>

@@ -345,7 +345,8 @@ app.controller('MainController', ['$scope', function($scope) {
       cover: "images/all-jeans/jeans view all "+i+".jpg",
       url: "../lookpage.html",
       products: ['jeans'],
-      saves: 0,
+      subproducts: [(i == 2 || i == 7) ? 'jeans-jackets' : 'jeans-trousers'],
+      saves: 0
     });
   }
   for (var i=1;i<=7;i++){
@@ -359,11 +360,13 @@ app.controller('MainController', ['$scope', function($scope) {
       cover: "images/black-jeans/black jeans "+i+".jpg",
       url: "../lookpage.html",
       products: ['jeans'],
+      subproducts: ['jeans-trousers'],
       colours: ['black'],
-      saves: 0,
+      saves: 0
     });
   }
   for (var i=1;i<=14;i++){
+    var jackets = 
     $scope.posts.push({
       id: 200 + i, 
       user: 'Mags Yip',
@@ -374,15 +377,30 @@ app.controller('MainController', ['$scope', function($scope) {
       cover: "images/ripped-jeans/Cat ripped jeans "+i+".jpg",
       url: "../lookpage.html",
       products: ['jeans'],
+      subproducts: ['jeans-trousers'],
       trends: ['ripped jeans'],
-      saves: 0,
+      saves: 0
     });
   }
   $scope.filterCategories = {
     trends: ['most popular', 'trending' ,'new in', 'ponchos', 'stripes', 'casual', 'classic shorts', 'ripped jeans', 'on your head', 'fringe fever',
 'girls night out', 'chic to work', 'animal print', 'flared pants', 'platforms', 'flower power', 'tartan', 'pretty pastel', 'aztec invasion'],
     colours: ['brown','red','orange','yellow','green','darkgreen','black','grey','purple','blue','lightblue','nude'],
-    products: ['accessories','all-in-one','bags & purses','coats','dresses','footwear','jackets','jeans','knitwear','lingerie','nightwear & slippers','shorts','skirts','swimwear','trousers']
+    products: ['accessories','all-in-one','bags & purses','coats','dresses','footwear','jackets','jeans','knitwear','lingerie','nightwear & slippers','shorts','skirts','swimwear','trousers'],
+    subproducts: ['jeans-jackets','jeans-trousers']
+  }
+  $scope.getSubProducts = function(){
+    if ($scope.filters['products'] == null){
+      return [];
+    }
+    var subs = _.filter($scope.filterCategories['subproducts'], function(sp){
+      return sp.indexOf($scope.filters['products'] + '-') == 0;
+    });
+    return subs;
+  }
+  $scope.hasSubProducts = function(){
+    var subs = $scope.getSubProducts();
+    return subs.length > 0;
   }
   /*
   $scope.filterCategories = {
@@ -405,11 +423,15 @@ app.controller('MainController', ['$scope', function($scope) {
   $scope.filters = {
     trends: null,
     colours: null,
-    products: null
+    products: null,
+    subproducts: null
   };
   $scope.filter = function(type, by){
     if (type){
       $scope.filters[type] = by;
+      if (type == 'products'){
+        $scope.filters['subproducts'] = null;
+      }
     }
     $scope.filteredPosts = _.filter($scope.posts, function(post){
       for (var f in $scope.filters){
