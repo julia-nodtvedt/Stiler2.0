@@ -386,7 +386,7 @@ app.controller('MainController', ['$scope', function($scope) {
     trends: ['most popular', 'trending' ,'new in', 'ponchos', 'stripes', 'casual', 'classic shorts', 'ripped jeans', 'on your head', 'fringe fever',
 'girls night out', 'chic to work', 'animal print', 'flared pants', 'platforms', 'flower power', 'tartan', 'pretty pastel', 'aztec invasion'],
     colours: ['brown','red','orange','yellow','green','darkgreen','black','grey','purple','blue','lightblue','nude'],
-    products: ['jacket','jeans','shoes','trousers']
+    products: ['accessories','all-in-one','bags & purses','coats','dresses','footwear','jackets','jeans','knitwear','lingerie','nightwear & slippers','shorts','skirts','swimwear','trousers']
   }
   /*
   $scope.filterCategories = {
