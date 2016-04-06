@@ -646,7 +646,6 @@ ul.profile-nav:after{
   text-transform: uppercase;
   font-size: 18px;
   font-weight: lighter;
-  padding-bottom: 10px;
 }
 
 .my-stiler img {
@@ -655,16 +654,55 @@ ul.profile-nav:after{
   margin-bottom: 40px;
 }
 
+/*My Profile*/
+
+.profile-hero {
+  background: url('../images/coverimage1.jpg');
+  height: 500px;
+  background-size: cover;
+  position:relative;
+}
+
+.my-lists p {
+  margin-left: 15%;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.my-lists a {
+  color: #000;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
 .my-lists iframe {
-  width: 100%;
+  padding: 0;
+  min-width: 100%;
+  height: 200px;
+  border: none;
+  margin-bottom: 30px;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .list-items li {
   display: inline-block;
-  float: left;
+  float: right;
+  margin-left: 0;
+}
+
+.list-items li:first-child {
+  position: relative;
+  left: 0;
+}
+
+.list-items img {
   height: 200px;
   width: auto;
-}
+} 
 
 .save-list{
   background: #fff;
