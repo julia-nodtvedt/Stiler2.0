@@ -698,11 +698,22 @@ ul.profile-nav:after{
 
 /*My Profile*/
 
-.profile-hero {
+.my-profile-hero {
   background: url('../images/coverimage1.jpg');
   height: 500px;
   background-size: cover;
   position:relative;
+}
+
+.my-profile-hero:after{
+  content: '';
+  background-color: rgba(255, 255, 255, 0.7);
+  display: block;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  height:80px;
 }
 
 .my-lists p {
@@ -928,7 +939,7 @@ ul.profile-nav:after{
   text-transform: uppercase;
 }
 
-/*Look Page*/
+/*Look Page Popup*/
 
 .overlay {
   position: absolute;
@@ -1067,10 +1078,29 @@ ul.profile-nav:after{
   background-color: rgb(70, 210, 170);
 }
 
-.product-info .product-desc {
+.product-info .product-list {
   margin-top: 90px;
   margin-left: -25px;
 }
+
+.product-info .product-desc p {
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+
+/*Flatlay Page*/
+
+.flatlay-products {
+  padding: 0;
+}
+
+.flatlay-products img, .flatlay-products p {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 
 
 /*============  Magazines  ============*/
