@@ -106,16 +106,18 @@
 					</div>
 					<div class="brick-overlay">
 						<h3>
-							{{ post.type }} by<br>
-							{{ post.user }} <i class="fa fa-star"></i> {{ post.saves }}
+							<span class="capitalize">{{ post.type }}</span> by<br>
+							{{ post.user }} <br>
 						</h3>
+						<p>Saves: {{ post.saves }}</p>
 						<p ng-if="post.category">
 							Featured in<br>
 							{{ post.category }}
 						</p>
 						<p class="buttons">
 							<button ng-click="savePost(post.id)" class="btn-outline pull-left">SAVE IT</button>
-							<a href="{{ post.url }}" class="btn-outline pull-right">SHOP IT</a>
+							<a href="{{ post.url }}" class="btn-outline pull-right" ng-if="post.type !== 'article'">SHOP IT</a>
+							<a href="{{ post.url }}" class="btn-outline pull-right" ng-if="post.type === 'article'">READ IT</a>
 						</p>
 						<div class="save-list" ng-class="overlayClass(post.id)">
 							<h4>SAVE TO</h4>

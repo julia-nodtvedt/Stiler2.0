@@ -8,6 +8,10 @@ html, body {
  width:100%;
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 /*Header*/
 
 .header {
