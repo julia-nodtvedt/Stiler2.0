@@ -418,7 +418,17 @@ app.controller('MainController', ['$scope', function($scope) {
     return a ? 'active' : '';
   }
   $scope.toggle = function(a,b){
-    return a == b ? '' : b;
+    var ret = a == b ? '' : b;
+    if (ret != 'trend'){
+      $scope.filters['trends'] = null;      
+    }
+    if (ret != 'colour'){
+      $scope.filters['products'] = null;
+      $scope.filters['subproducts'] = null;
+      $scope.filters['colours'] = null;
+    }
+    $scope.filter();
+    return ret;
   }
   $scope.filters = {
     trends: null,
