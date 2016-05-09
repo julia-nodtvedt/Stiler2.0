@@ -644,17 +644,39 @@ h1.upper{
   }
 }
 
-h1.profile-title{
+ul.profile-heading {
   margin:-80px 0 30px 0;
   font-size: 28px;
   font-family: serif;
   font-weight: normal;
   line-height: 20px;
-  padding-top:30px;
-  min-height:80px;
+  padding-top: 30px;
+  min-height: 80px;
   position:relative;
   overflow: hidden;
 }
+
+ul.profile-heading li { 
+  float: left;
+  list-style-type: none;
+  padding-right: 30px;
+}
+
+p.profile-title{
+  font-weight: lighter;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+a.blog-url {
+  font-size: 22px;
+  color: #000;
+}
+
+ul.profile-heading img {
+  width: 20px;
+}
+
 .profile-description{
   margin:30px 0;
 }
